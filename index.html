@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: brown;
+        }
+        h4{
+            color: blueviolet;
+            font-size: 20px;
+        }
+        pre{
+            color: black;
+            width: 450px;
+            height: 350px;
+            background-color: aliceblue;
+            border: 1px solid red;
+            border-radius: 10px;
+            font-size: 20px;
+            
+        }
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<h1>JS HANDS-ON MAP AND SET</h1>
+<h4>using Set</h4>
+<pre>
+    let s="ABCAAVVB";
+let set = new Set();
+for(let i=0; i < s.length; i++){
+    set.add(s[i]);
+
+}
+let res ="";
+for(let ch of set){
+    res = res+ch;
+}
+console.log(res);
+
+</pre>
+<h4>using Map</h4>
+<pre>
+    let str = "ABCCBDC"
+let map = new Map();
+for(let i=0; i< str.length;i++){
+    if(map.has(str[i])){
+        let value = map.get(str[i]);
+        map.set(str[i],value+1);
+    }
+    else{
+        map.set(str[i],1)
+    }
+}
+for(let[k,v] of map){
+    console.log(k+"="+v)
+}
+</pre>
+    
+
+   <script src="./main.js"></script> 
+</body>
+</html>
